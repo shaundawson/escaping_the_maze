@@ -52,10 +52,7 @@ def jump():
     turn_left()
  
 while not at_goal():
-    print(at_goal())
-    print(wall_in_front())
-    print(front_is_clear())
-    if front_is_clear() == True and wall_in_front() == False:
-        move()
-    else:
+    if wall_in_front():
         jump()
+    else:
+        move()
